@@ -1,0 +1,268 @@
+/* Light mode styles (default) */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f9; /* Light background for a clean look */
+    color: #333; /* Dark text for readability */
+}
+
+.navbar {
+    background-color: #2c3e50; /* Dark navy blue for a strong contrast */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 30px; /* Add padding to move the text away from the edges */
+}
+
+.navbar-nav {
+    margin-left: auto; /* Moves the menu items to the right */
+    margin-right: 50px; /* Adds some space on the right side to avoid touching the edge */
+}
+
+.nav-link {
+    color: #ecf0f1 !important; /* Light text for contrast */
+    margin-left: 20px; /* Adds space between each menu item */
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #f39c12 !important; /* Gold-like color for emphasis */
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle background highlight on hover */
+}
+
+.container {
+    transition: opacity 0.5s ease-in-out;
+}
+
+h2 {
+    color: #2c3e50; /* Dark navy blue for headings */
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.section {
+    padding: 40px;
+    background-color: #ffffff; /* White background for sections */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+}
+
+.section:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+}
+
+.intro-img {
+    width: 300px; /* Larger image */
+    height: 300px; /* Ensures circular shape */
+    border: 8px solid #ecf0f1; /* Thick border */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Fast transition on hover */
+}
+
+.intro-img:hover {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.3); /* Increase shadow depth on hover */
+}
+
+/* Main text introduction */
+h1 {
+    color: #2c3e50; /* Dark navy blue for heading */
+    font-size: 2.5rem; /* Larger text size for the name */
+    font-weight: bold; /* Emphasize the heading */
+    margin-top: 20px; /* Space between the image and the text */
+}
+
+.lead {
+    font-size: 1.2rem; /* Slightly larger font for the intro paragraph */
+    color: #5a5a5a; /* Softer gray for introductory text */
+}
+
+p {
+    font-size: 1rem; /* Regular paragraph text size */
+    color: #5a5a5a;
+    margin-top: 10px;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #121212; /* Dark background for the body */
+    color: #e0e0e0; /* Light text for readability */
+}
+
+body.dark-mode .navbar {
+    background-color: #1e1e1e; /* Dark navbar */
+}
+
+body.dark-mode .nav-link {
+    color: #e0e0e0 !important; /* Light text for links */
+}
+
+body.dark-mode .nav-link:hover {
+    color: #f0f0f0 !important; /* Lighter text on hover */
+}
+
+body.dark-mode .section {
+    background-color: #1e1e1e; /* Dark background for sections */
+    color: #e0e0e0; /* Light text */
+}
+
+body.dark-mode .section h2 {
+    color: #f0f0f0; /* Lighter color for headings */
+}
+
+body.dark-mode .section p, 
+body.dark-mode .section li {
+    color: #c0c0c0; /* Slightly lighter text for better readability */
+    border-radius: 10rem;
+}
+
+body.dark-mode .intro-img {
+    border-color: #333; /* Dark border for images */
+}
+
+/* Ensure correct styling for buttons */
+.btn-outline-light {
+    color: #e0e0e0; /* Light text color */
+    border-color: #e0e0e0; /* Light border color */
+}
+
+.btn-outline-light:hover {
+    color: #121212; /* Dark text color on hover */
+    background-color: #e0e0e0; /* Light background on hover */
+}
+
+/* Ensure high contrast for home section in light mode */
+#home {
+    background-color: #fcfcfc; /* White background for home section */
+    color: #333; /* Dark text color for visibility */
+}
+
+/* Dark mode styling for home section */
+body.dark-mode #home {
+    background-color: #1e1e1e; /* Dark background for home section */
+    color: #e0e0e0; /* Light text color */
+}
+
+/* Ensure consistent text color in home section */
+#home h1, #home p {
+    color: inherit; /* Inherit color from parent */
+    
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+    opacity: 1; /* Ensure the opacity is set correctly */
+}
+
+/* Hide sections by default with display: none */
+.section {
+    display: none; /* Sections are hidden by default */
+    padding: 40px;
+    background-color: #ffffff; /* White background for light mode */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border-radius: 50px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.section:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+}
+
+/* Ensure the home section is visible by default and apply fade-in animation */
+#home {
+    display: block; /* Default display for the home section */
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); 
+}
+
+/* Animation keyframes for typing effect */
+@keyframes typing {
+    from {
+        transform: translateX(-100%); /* Start from left outside viewport */
+    }
+    to {
+        transform: translateX(0); /* Move to original position */
+    }
+}
+
+@keyframes blink {
+    0% { border-color: transparent; }
+    100% { border-color: transparent; }
+}
+
+/* Container to handle overflow */
+.typing-container {
+    overflow: hidden; /* Hides text while typing */
+    white-space: nowrap; /* Keeps text on a single line */
+    display: inline-block; /* Fit to text width */
+    width: 100%; /* Ensure it spans the container */
+    text-align: left; /* Align text to the left */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.typing-effect {
+    animation: typing 4s steps(40, end), blink 0.75s step-end infinite; /* Typing animation with faster speed */
+    white-space: nowrap; /* Keep text on a single line */
+    display: inline-block;
+    font-size: 1.2rem; /* Adjust the font size to fit the container */
+    box-sizing: border-box; /* Ensure text fits within the box */
+    width: 100%; /* Ensure it spans the container */
+}
+
+/* Animation for waiting and retyping */
+@keyframes typing-repeat {
+    0% { transform: translateX(-100%); }
+    10% { transform: translateX(0); }
+    90% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+.typing-effect-container {
+    display: inline-block;
+    overflow: hidden; /* Keeps text within the container */
+    white-space: nowrap;
+    border-right: 2px solid #333; /* Cursor effect */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    position: relative;
+    width: 100%; /* Ensure it spans the container */
+}
+
+.social-icons-container {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+    background-color: transparent; /* No background */
+}
+
+.social-icons-container {
+    position: fixed;
+    bottom: 20px; /* Adjust distance from bottom */
+    right: 20px; /* Adjust distance from right */
+    display: flex;
+    align-items: center; /* Align icons vertically centered */
+    gap: 15px; /* Space between icons */
+    background-color: transparent; /* No background */
+}
+
+/* Social Media Icon Styling */
+.social-icon {
+    color: #333; /* Dark color for icons */
+    font-size: 1.2rem; /* Smaller but visible size for icons */
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #007bff; /* Change color on hover */
+}
